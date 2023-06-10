@@ -23,6 +23,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite-url/about/index.html</loc>
+    
+    <lastmod>2023-06-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/cn/Hexo%E6%9C%AA%E7%94%9F%E6%88%90HTML%E6%96%87%E4%BB%B6/</loc>
     
     <lastmod>2023-06-10</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://yoursite-url/archive/index.html</loc>
     
     <lastmod>2017-03-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/about/index.html</loc>
-    
-    <lastmod>2016-04-20</lastmod>
     
   </url>
   
