@@ -4,21 +4,28 @@
   <url>
     <loc>http://yoursite-url/tags/index.html</loc>
     
-    <lastmod>2023-06-08</lastmod>
+    <lastmod>2023-06-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/index.html</loc>
     
-    <lastmod>2023-06-08</lastmod>
+    <lastmod>2023-06-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/404.html</loc>
     
-    <lastmod>2023-06-08</lastmod>
+    <lastmod>2023-06-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/cn/Hexo%E6%9C%AA%E7%94%9F%E6%88%90HTML%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2023-06-10</lastmod>
     
   </url>
   
@@ -46,7 +53,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2023-06-08</lastmod>
+    <lastmod>2023-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -54,7 +61,14 @@
   
   <url>
     <loc>http://yoursite-url/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2023-06-08</lastmod>
+    <lastmod>2023-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/Hexo-g-%E7%94%9F%E6%88%90HTML/</loc>
+    <lastmod>2023-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -63,7 +77,14 @@
   
   <url>
     <loc>http://yoursite-url/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2023-06-08</lastmod>
+    <lastmod>2023-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/HexoBlog/</loc>
+    <lastmod>2023-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -480,6 +480,58 @@
   <!-- top end -->
   
 
+  <a href="/cn/Hexo未生成HTML文件/">
+    <h2 class="post-title">
+      Hexo g未生成HTML文件
+    </h2>
+    <h3 class="post-subtitle">
+      Wired Problem With Hexo g
+    </h3>
+    <div class="post-content-preview">
+      问题原因：
+
+在安装依赖时有的依赖并没有被安装
+
+解决方法：
+
+在项目目录中执行：
+
+1npm ls --depth 0
+
+
+有些依赖没有安装成功，大部分是以hexo-generator开头的组件:
+
+
+
+将缺失的依赖重新安装，并将信息添加到dependencies中，这样下次重新部署环境就不会缺失了
+
+1npm install hexo-generator-archive --save
+
+......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by KabaBZ on
+    2023-06-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Hexo g 生成HTML" title="Hexo g 生成HTML">Hexo g 生成HTML</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/Hexo-Theme-LiveMyLife/">
     <h2 class="post-title">
       Hexo-Theme-LiveMyLife
@@ -559,6 +611,10 @@ Gitee 仓库地址：ht......
     <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1">Hexo-Theme-LiveMyLife</a>
     
     
+    
+    <a href="/tags/#Hexo g 生成HTML" title="Hexo g 生成HTML" rel="1">Hexo g 生成HTML</a>
+    
+    
   </div>
 </section>
 
@@ -619,6 +675,10 @@ Gitee 仓库地址：ht......
 <div class="widget">
   <ul>
     
+    <a href="cn/Hexo%E6%9C%AA%E7%94%9F%E6%88%90HTML%E6%96%87%E4%BB%B6/">
+      <li>Hexo g未生成HTML文件</li>
+    </a>
+    
     <a href="cn/Hexo-Theme-LiveMyLife/">
       <li>Hexo-Theme-LiveMyLife</li>
     </a>
@@ -647,7 +707,7 @@ Gitee 仓库地址：ht......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2023/06/">June 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -661,6 +721,10 @@ Gitee 仓库地址：ht......
     
     <a href="/categories/#Hexo-Theme-LiveMyLife">
       <li>Hexo-Theme-LiveMyLife</li>
+    </a>
+    
+    <a href="/categories/#HexoBlog">
+      <li>HexoBlog</li>
     </a>
     
   </ul>
