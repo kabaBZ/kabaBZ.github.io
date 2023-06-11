@@ -4,21 +4,28 @@
   <url>
     <loc>http://yoursite-url/tags/index.html</loc>
     
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/index.html</loc>
     
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/404.html</loc>
     
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/StableDeffusion/%E6%9C%AC%E5%9C%B0%E5%8C%96%E9%83%A8%E7%BD%B2StableDeffusion/</loc>
+    
+    <lastmod>2023-06-11</lastmod>
     
   </url>
   
@@ -53,22 +60,36 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://yoursite-url/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/StableDeffusion/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Hexo-g-%E7%94%9F%E6%88%90HTML/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -76,15 +97,22 @@
 
   
   <url>
+    <loc>http://yoursite-url/categories/StableDeffusion/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/HexoBlog/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
