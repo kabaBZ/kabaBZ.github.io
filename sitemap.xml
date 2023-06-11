@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/StableDeffusion/%E6%9C%AC%E5%9C%B0%E5%8C%96%E9%83%A8%E7%BD%B2StableDeffusion/</loc>
+    <loc>http://yoursite-url/cn/%E6%9C%AC%E5%9C%B0%E5%8C%96%E9%83%A8%E7%BD%B2StableDeffusion/</loc>
     
     <lastmod>2023-06-11</lastmod>
     
@@ -67,20 +67,6 @@
 
   
   <url>
-    <loc>http://yoursite-url/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/tags/StableDeffusion/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/tags/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
@@ -94,14 +80,21 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>http://yoursite-url/categories/StableDeffusion/</loc>
+    <loc>http://yoursite-url/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/StableDeffusion/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
   
   <url>
     <loc>http://yoursite-url/categories/Hexo-Theme-LiveMyLife/</loc>
@@ -112,6 +105,13 @@
   
   <url>
     <loc>http://yoursite-url/categories/HexoBlog/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/categories/StableDeffusion/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
