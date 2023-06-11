@@ -400,11 +400,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">24</span> In Total
+              Words <span class="post-count">671</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -468,9 +468,51 @@
 
         <h1>准备工作</h1>
 <ul>
-<li>一台装有git、python3.10.6的电脑</li>
-<li>尽量把电脑搬到香港</li>
+<li>一台装有git、python3.10.6的电脑（尽量记住自己python的安装位置）
+<ul>
+<li>python版本尽量使用3.10。因为很多以来要求python版本&lt;3.10,我之前使用3.11搭建失败后面又换回了3.10。</li>
+<li>git和python的安装教程有很多可以自己去网络上搜索一下</li>
 </ul>
+</li>
+<li>尽量把电脑搬到香港。</li>
+</ul>
+<h1>下载所需资源</h1>
+<h2 id="下载模型文件">下载模型文件</h2>
+<p><a target="_blank" rel="noopener" href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original">https://huggingface.co/CompVis/stable-diffusion-v-1-4-original</a></p>
+<p><img src="image.png" alt="Alt text"></p>
+<ul>
+<li>下载模型（4G左右）</li>
+</ul>
+<h2 id="下载Webui源码">下载Webui源码</h2>
+<p>在webui文件夹（自己喜欢的地方尽量使用英文路径）中打开命令行，执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/AUTOMATIC1111/stable-diffusion-webui.git</span><br></pre></td></tr></table></figure>
+<h2 id="排错网址">排错网址</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40735291/article/details/129333599">https://blog.csdn.net/weixin_40735291/article/details/129333599</a></li>
+</ul>
+<h1>开始部署</h1>
+<p><img src="image-1.png" alt="Alt text"></p>
+<p>在之前打开命令行的文件夹中执行git命令后，会多出一个名为stable-diffusion-webui的文件夹。</p>
+<h2 id="安装依赖">安装依赖</h2>
+<p>进入文件夹执行webui-user.bat文件，该文件会自动帮你下载部署项目所需要的一些依赖。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">venv</span> <span class="string">&quot;C:\Users\kaba\stable-diffusion-webui\venv\Scripts\Python.exe&quot;</span></span><br><span class="line"><span class="attribute">Python</span> <span class="number">3</span>.<span class="number">10</span>.<span class="number">6</span> (tags/v<span class="number">3</span>.<span class="number">10</span>.<span class="number">6</span>:<span class="number">9</span>c<span class="number">7</span>b<span class="number">4</span>bd, Aug  <span class="number">1</span> <span class="number">2022</span>, <span class="number">21</span>:<span class="number">53</span>:<span class="number">49</span>)<span class="meta"> [MSC v.1932 64 bit (AMD64)]</span></span><br></pre></td></tr></table></figure>
+<p>开头有类似提示则证明使用的3.10.6版本的本地虚拟环境，安装完成后文件夹中应该会多出许多的文件。</p>
+<p>这一步骤对网络要求比较高，也会耗费较长时间。python库的部分可以通过配置清华源赖提高下载速度，但是有的库（gfpgan等）只能通过github拉代码本地安装。所以最好还是电脑在香港。</p>
+<h2 id="依赖安装问题解决方法">依赖安装问题解决方法</h2>
+<p>在下载依赖时出现问题可以参考这个文章解决问题（之前打开的那个网址）<br>
+安装gfpgan库报错同样看这里：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40735291/article/details/129333599">https://blog.csdn.net/weixin_40735291/article/details/129333599</a></p>
+<h1>安装成功</h1>
+<h2 id="成功提示">成功提示</h2>
+<p>安装成功后会自动启动任务，也可以关闭脚本手动重新再执行一次之前的文件打开web。</p>
+<p><img src="image-2.png" alt="Alt text"></p>
+<p>有时会提示上图的问题，这是python的一个库，可以手动下载后使用虚拟环境中的python安装到本地。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载链接</span></span><br><span class="line">https://ghproxy.com/https://github.com/C43H66N12O12S2/stable-diffusion-webui/releases/download/f/xformers-0.0.14.dev0-cp310-cp310-win_amd64.whl</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装命令 文件放在命令行目录中执行下面命令</span></span><br><span class="line">[你的安装目录路径]\stable-diffusion-webui\venv\Scripts\python.exe -m pip install xformers-0.0.14.dev0-cp310-cp310-win_amd64.whl</span><br></pre></td></tr></table></figure>
+<h2 id="打开Wenui">打开Wenui</h2>
+<p>命令行中有类似的提示：</p>
+<p>Running on local URL:  <a target="_blank" rel="noopener" href="http://127.0.0.1:7860">http://127.0.0.1:7860</a></p>
+<p>将url复制到浏览器打开就可以看到自己本地部署的SD啦！</p>
 
 
         <hr>
@@ -615,7 +657,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">准备工作</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">准备工作</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">下载所需资源</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">下载模型文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BDWebui%E6%BA%90%E7%A0%81"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">下载Webui源码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8E%92%E9%94%99%E7%BD%91%E5%9D%80"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">排错网址</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">开始部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">安装依赖</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%9D%E8%B5%96%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">依赖安装问题解决方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">安装成功</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%88%90%E5%8A%9F%E6%8F%90%E7%A4%BA"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">成功提示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%89%93%E5%BC%80Wenui"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">打开Wenui</span></a></li></ol></li></ol>
         
         </div>
       </aside>
