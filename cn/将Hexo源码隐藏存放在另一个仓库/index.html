@@ -483,26 +483,26 @@ Hexo在文档中提供了两种部署方式</p>
 <p>在readme中很明显的就找到了这个配置，意思就是当你想要将展示页面推送到别的仓库时就要使用这个配置。还贴心的提示了GITHUB_TOKEN没有足够的权限进行这个操作，要使用deploy_key 或 personal_token。先不管key的问题我们先加上这个配置试一下。</p>
 <h3 id="修改workflow配置">修改workflow配置</h3>
 <p>打开项目中的workflow文件，将最后deploy配置修改为下图（替换为自己的仓库地址）：</p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/changeConfig.png" alt="Alt text"></p>
 <p>然后新建个仓库将源码推送到新的仓库。打开仓库的workflow页面：</p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-1.png" alt="Alt text"></p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-2.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/error.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/Tokenerror.png" alt="Alt text"></p>
 <p>果然失败了，确实是GITHUB_TOKEN引起的问题。</p>
 <h3 id="新建-personal-token">新建 personal_token</h3>
 <h4 id="打开github个人设置">打开github个人设置</h4>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-3.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/personalsettings.png" alt="Alt text"></p>
 <h4 id="打开新建personal-token的页面">打开新建personal_token的页面</h4>
 <p>路径为：左侧边栏最下方Developer settings-&gt;Personal access tokens-&gt;Tokens (classic)</p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-4.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/setTokens.png" alt="Alt text"></p>
 <p>新建的key只会显示一次，一定要复制好了，不要弄丢了。我们还要回到项目中使用一次。我这里已经新建好了一个无限期的Token使用，就不再演示了。</p>
 <h3 id="为源码仓库配置Personal-Token">为源码仓库配置Personal_Token</h3>
 <p>回到之前新建的Hexo源码仓库，在下图位置中为我们的项目设置我们刚刚生成的key。</p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-5.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/setRepoToken.png" alt="Alt text"></p>
 <h3 id="更新workflow配置">更新workflow配置</h3>
 <p>将workflow文件中的key配置为personal_key。</p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-6.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/fixConfig.png" alt="Alt text"></p>
 <p>再次推送分支会发现我们的workflow已经可以成功执行了！</p>
-<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-7.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/suc.png" alt="Alt text"></p>
 <h2 id="config-yml">_config.yml</h2>
 <p>pending</p>
 
