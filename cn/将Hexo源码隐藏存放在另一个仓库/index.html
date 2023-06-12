@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/archives/">
+  <link rel="canonical" href="http://yoursite-url/cn/将Hexo源码隐藏存放在另一个仓库/">
   <title>
     
-      Que sera, sera.
+      将Hexo源码隐藏存放在另一个仓库 - Que sera, sera.
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -350,18 +350,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io//img/header_img/lml_bg.jpg');
     }
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -380,10 +380,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>My Blog</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">kaba&#39;s blog</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Hexo隐藏源码" title="Hexo隐藏源码">Hexo隐藏源码</a>
+              
+            </div>
+            <h1>将Hexo源码隐藏存放在另一个仓库</h1>
+            <h2 class="subheading">Hexo的部署方式改动</h2>
+            <span class="meta">
+              Posted by KabaBZ on
+              2023-06-12
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">2</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">600</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -424,297 +456,297 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>背景介绍</h1>
+<p>随着hexo配置越来越多，很多设置都用到了githubToken之类的认证密钥，如果还按照Hexo官方的部署方法，我们的认证密钥就有泄露的风险。</p>
+<h1>Hexo官方部署方法</h1>
+<p>官方文档：<br>
+<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/github-pages">https://hexo.io/zh-cn/docs/github-pages</a><br>
+Hexo在文档中提供了两种部署方式</p>
+<h2 id="GithubWorkflow">GithubWorkflow</h2>
+<p>Workflow的方式是通过push仓库自动触发部署命令的。</p>
+<h3 id="发现问题">发现问题</h3>
+<p>Hexo官方提供了Workflow的模板供我们使用，我们主要注意一下Deploy部分的配置：</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/DefaultDeploy.png" alt="Alt text"></p>
+<p>如果按照Hexo官方的配置，会发现我们的hexo源码在main分支，生成的静态页面在gh-page分支上。</p>
+<p>由于githubPage的仓库要设为公开才能被所有人访问，所以我们的Hexo源码也暴露在外。这显然不是我们想要的。</p>
+<h3 id="发现解决思路">发现解决思路</h3>
+<p>在配置文件中我们发现部署实际上使用的是peaceiris/actions-gh-pages@v3这个仓库。打开仓库进去看下。</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/gh-pages@v3.png" alt="Alt text"></p>
+<p>在readme中很明显的就找到了这个配置，意思就是当你想要将展示页面推送到别的仓库时就要使用这个配置。还贴心的提示了GITHUB_TOKEN没有足够的权限进行这个操作，要使用deploy_key 或 personal_token。先不管key的问题我们先加上这个配置试一下。</p>
+<h3 id="修改workflow配置">修改workflow配置</h3>
+<p>打开项目中的workflow文件，将最后deploy配置修改为下图（替换为自己的仓库地址）：</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image.png" alt="Alt text"></p>
+<p>然后新建个仓库将源码推送到新的仓库。打开仓库的workflow页面：</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-1.png" alt="Alt text"></p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-2.png" alt="Alt text"></p>
+<p>果然失败了，确实是GITHUB_TOKEN引起的问题。</p>
+<h3 id="新建-personal-token">新建 personal_token</h3>
+<h4 id="打开github个人设置">打开github个人设置</h4>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-3.png" alt="Alt text"></p>
+<h4 id="打开新建personal-token的页面">打开新建personal_token的页面</h4>
+<p>路径为：左侧边栏最下方Developer settings-&gt;Personal access tokens-&gt;Tokens (classic)</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-4.png" alt="Alt text"></p>
+<p>新建的key只会显示一次，一定要复制好了，不要弄丢了。我们还要回到项目中使用一次。我这里已经新建好了一个无限期的Token使用，就不再演示了。</p>
+<h3 id="为源码仓库配置Personal-Token">为源码仓库配置Personal_Token</h3>
+<p>回到之前新建的Hexo源码仓库，在下图位置中为我们的项目设置我们刚刚生成的key。</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-5.png" alt="Alt text"></p>
+<h3 id="更新workflow配置">更新workflow配置</h3>
+<p>将workflow文件中的key配置为personal_key。</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-6.png" alt="Alt text"></p>
+<p>再次推送分支会发现我们的workflow已经可以成功执行了！</p>
+<p><img src="/cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/image-7.png" alt="Alt text"></p>
+<h2 id="config-yml">_config.yml</h2>
+<p>pending</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/本地化部署StableDeffusion/" data-toggle="tooltip" data-placement="top" title="本地化部署StableDeffusion">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=将Hexo源码隐藏存放在另一个仓库&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/将Hexo源码隐藏存放在另一个仓库/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/kabaBZ/kabaBZ.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'd9e056dcb73171f622d8',
+      clientSecret: 'c66c0bb0f6aa145aa48c4dfe9c837f15fae4507a',
+      repo: 'kabaBZ.github.io',
+      owner: 'kabaBZ',
+      admin: 'kabaBZ',
+      id: 'Mon Jun 12 2023 02:34:12 GMT+0000', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en || zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">背景介绍</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Hexo官方部署方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#GithubWorkflow"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">GithubWorkflow</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%91%E7%8E%B0%E9%97%AE%E9%A2%98"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">发现问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%91%E7%8E%B0%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">发现解决思路</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9workflow%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">修改workflow配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BA-personal-token"><span class="toc-nav-number">2.1.4.</span> <span class="toc-nav-text">新建 personal_token</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%93%E5%BC%80github%E4%B8%AA%E4%BA%BA%E8%AE%BE%E7%BD%AE"><span class="toc-nav-number">2.1.4.1.</span> <span class="toc-nav-text">打开github个人设置</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%89%93%E5%BC%80%E6%96%B0%E5%BB%BApersonal-token%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="toc-nav-number">2.1.4.2.</span> <span class="toc-nav-text">打开新建personal_token的页面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%BA%E6%BA%90%E7%A0%81%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AEPersonal-Token"><span class="toc-nav-number">2.1.5.</span> <span class="toc-nav-text">为源码仓库配置Personal_Token</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0workflow%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.1.6.</span> <span class="toc-nav-text">更新workflow配置</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#config-yml"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">_config.yml</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
     
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2023">
-          <span class="tag-text">2023</span>
-        </span>
-        <ul>
-          
-          <li>
-            06-12
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/将Hexo源码隐藏存放在另一个仓库/" style="color: #0085a1">
-              <span>
-                将Hexo源码隐藏存放在另一个仓库
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-11
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/本地化部署StableDeffusion/" style="color: #0085a1">
-              <span>
-                本地化部署StableDeffusion
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-10
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Hexo未生成HTML文件/" style="color: #0085a1">
-              <span>
-                Hexo g未生成HTML文件
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-          <span class="tag-text">2020</span>
-        </span>
-        <ul>
-          
-          <li>
-            04-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                Hexo-Theme-LiveMyLife
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Hexo隐藏源码" title="Hexo隐藏源码">Hexo隐藏源码</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1">Hexo-Theme-LiveMyLife</a>
-    
-    
-    
-    <a href="/tags/#Hexo g 生成HTML" title="Hexo g 生成HTML" rel="1">Hexo g 生成HTML</a>
-    
-    
-    
-    <a href="/tags/#Hexo隐藏源码" title="Hexo隐藏源码" rel="1">Hexo隐藏源码</a>
-    
-    
-    
-    <a href="/tags/#本地部署" title="本地部署" rel="1">本地部署</a>
-    
-    
-    
-    <a href="/tags/#StableDeffusion" title="StableDeffusion" rel="1">StableDeffusion</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/sebP2.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>Fat people have no future, either thin or die...</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/kabaBZ">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../cn/%E5%B0%86Hexo%E6%BA%90%E7%A0%81%E9%9A%90%E8%97%8F%E5%AD%98%E6%94%BE%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93/">
-      <li>将Hexo源码隐藏存放在另一个仓库</li>
-    </a>
-    
-    <a href="../cn/%E6%9C%AC%E5%9C%B0%E5%8C%96%E9%83%A8%E7%BD%B2StableDeffusion/">
-      <li>本地化部署StableDeffusion</li>
-    </a>
-    
-    <a href="../cn/Hexo%E6%9C%AA%E7%94%9F%E6%88%90HTML%E6%96%87%E4%BB%B6/">
-      <li>Hexo g未生成HTML文件</li>
-    </a>
-    
-    <a href="../cn/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
-  
-  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="2023/06/">June 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-    <a href="/categories/#HexoBlog">
-      <li>HexoBlog</li>
-    </a>
-    
-    <a href="/categories/#StableDeffusion">
-      <li>StableDeffusion</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -825,7 +857,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "kabaBZ";
     let ghPages = gh + ".github.io";
-    let pagePath = "archives/index.html";
+    let pagePath = "cn/将Hexo源码隐藏存放在另一个仓库/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
